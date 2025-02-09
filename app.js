@@ -222,21 +222,30 @@ function displayQuestion() {
 function displayNextQuestion() {
   currentQuestionIndex++;
   displayQuestion();
-
-  if (currentQuestionIndex === quizQuestions.length - 1) {
-    // if last question, display finish button instead
-    prevButton.classList.add("hidden");
-    nextButton.classList.add("hidden");
-    finishButton.classList.remove("hidden");
-  }
+  handleButtonDisplay();
 }
 
 function displayPrevQuestion() {
   currentQuestionIndex--;
   displayQuestion();
+  handleButtonDisplay();
+}
 
-  if (currentQuestionIndex === 0) {
-    // if first question, hide back button
+function handleButtonDisplay() {
+  if (currentQuestionIndex >= quizQuestions.length - 1) {
+    // if last question, display finish button instead
     prevButton.classList.add("hidden");
+    nextButton.classList.add("hidden");
+    finishButton.classList.remove("hidden");
+  } else if (currentQuestionIndex <= 0) {
+    // if first question, hide back button
+    nextButton.classList.remove("hidden");
+    prevButton.classList.add("hidden");
+    finishButton.classList.add("hidden");
+  } else {
+    // other cases, show back and next buttons
+    prevButton.classList.remove("hidden");
+    nextButton.classList.remove("hidden");
+    finishButton.classList.add("hidden");
   }
 }

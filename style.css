@@ -45,6 +45,7 @@ section {
   cursor: pointer;
   transition: 0.4s;
   box-shadow: 0 0 3px #007bff;
+  user-select: none;
 }
 .option.active {
   background: #007bff;
@@ -65,6 +66,7 @@ section {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.4s;
+  user-select: none;
 }
 .btn:hover {
   background: #0056b3;

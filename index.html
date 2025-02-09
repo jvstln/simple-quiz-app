@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <!-- Initial Card: Will be hidden when the quiz starts -->
+      <section id="startSection">
+        <h1>How smart are you?</h1>
+        <p>Test your knowledge and have fun!</p>
+        <button class="btn" id="startButton">Start Quiz</button>
+      </section>
+
+      <!-- The main question section -->
+      <section id="questionSection" class="hidden">
+        <div id="progress"></div>
+        <h2 class="question">What is the capital of France?</h2>
+        <div class="options">
+          <button class="option active">A. Berlin</button>
+          <button class="option">B. Madrid</button>
+          <button class="option">C. Paris</button>
+          <button class="option">D. Rome</button>
+        </div>
+        <button class="btn" id="nextButton">Next</button>
+      </section>
+
+      <!-- Result section -->
+      <section id="resultSection" class="hidden">
+        <h1 id="resultComment">Result</h1>
+        <p id="result"></p>
+        <button class="btn" id="startButton">Restart Quiz</button>
+      </section>
+    </div>
+  </body>
+</html>

@@ -19,21 +19,20 @@
       <!-- The main question section -->
       <section id="questionSection" class="hidden">
         <div id="progress"></div>
-        <h2 class="question">What is the capital of France?</h2>
-        <div class="options">
-          <button class="option active">A. Berlin</button>
-          <button class="option">B. Madrid</button>
-          <button class="option">C. Paris</button>
-          <button class="option">D. Rome</button>
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <div class="btn-group">
+          <button class="btn" id="prevButton">Back</button>
+          <button class="btn" id="nextButton">Next</button>
+          <button class="btn hidden" id="finishButton">Finish</button>
         </div>
-        <button class="btn" id="nextButton">Next</button>
       </section>
 
       <!-- Result section -->
       <section id="resultSection" class="hidden">
         <h1 id="resultComment">Result</h1>
         <p id="result"></p>
-        <button class="btn" id="startButton">Restart Quiz</button>
+        <button class="btn" id="restartButton">Restart Quiz</button>
       </section>
     </div>
   </body>

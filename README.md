@@ -1,13 +1,11 @@
 ```
- _____ _   _ _____ ______   ___  ____________
-|  _  | | | |_   _|___  /  / _ \ | ___ \ ___ \
-| | | | | | | | |    / /  / /_\ \| |_/ / |_/ /
-| | | | | | | | |   / /   |  _  ||  __/|  __/
-\ \/' / |_| |_| |_./ /___ | | | || |   | |
- \_/\_\\___/ \___/\_____/ \_| |_/\_|   \_|
-```
+   ___  _   _ ___ _____     _    ____  ____
+  / _ \| | | |_ _|__  /    / \  |  _ \|  _ \
+ | | | | | | || |  / /    / _ \ | |_) | |_) |
+ | |_| | |_| || | / /_   / ___ \|  __/|  __/
+  \__\_\\___/|___/____| /_/   \_\_|   |_|
 
-# Quiz App
+```
 
 A simple quiz application built using HTML, CSS, and JavaScript. The app features a welcoming hero card, interactive quiz questions, and a results page displaying the user's score.
 

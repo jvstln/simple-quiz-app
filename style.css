@@ -6,6 +6,7 @@
 body {
   font-family: system-ui, Inter, Poppins, sans-serif;
   background-color: #f4f4f4;
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,10 +19,10 @@ section {
   gap: 8px;
 }
 .quiz-container {
-  background: white;
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px #007bff;
   width: 300px;
   text-align: center;
   transition: 0.4s;
@@ -37,23 +38,27 @@ section {
 }
 .option {
   padding: 10px;
-  border: 1px solid #00c951;
+  border: none;
   background: transparent;
   border-radius: 10px;
   text-align: left;
   cursor: pointer;
   transition: 0.4s;
+  box-shadow: 0 0 3px #007bff;
 }
 .option.active {
-  background: #00c951;
+  background: #007bff;
+  border-color: #007bff;
   color: #fff;
+  box-shadow: 0 0 10px #007bff;
 }
 .option:hover:not(.active) {
-  background: #00c95122;
+  background: #007bff22;
+  box-shadow: 0 0 10px #007bff;
 }
 .btn {
   background: #007bff;
-  color: white;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   margin: 5px 0;
@@ -63,6 +68,7 @@ section {
 }
 .btn:hover {
   background: #0056b3;
+  box-shadow: 0 0 10px #007bff;
 }
 .btn-group {
   display: flex;
@@ -73,4 +79,20 @@ section {
 }
 .hidden {
   display: none;
+}
+#progressContainer {
+  position: relative;
+  border: 5px solid #fff;
+  margin: -20px -20px 0;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  z-index: 1;
+  overflow: hidden;
+}
+#progressBar {
+  position: absolute;
+  inset: 0;
+  background: #007bff88;
+  z-index: -1;
+  transition: 0.5s;
 }

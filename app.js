@@ -143,7 +143,7 @@ function startQuiz() {
 
   quizQuestions.forEach((question) => (question.pickedAnswer = null));
   currentQuestionIndex = 0;
-  displayNextQuestion();
+  displayQuestion();
 }
 
 function restartQuiz() {
@@ -187,12 +187,11 @@ function displayResult() {
 function displayQuestion() {
   const currentQuestion = quizQuestions[currentQuestionIndex];
   document.querySelector("#question").textContent = currentQuestion.question;
-  document.querySelector("#progress").textContent = `Question ${
-    currentQuestionIndex + 1
-  }/${quizQuestions.length}`;
 
+  // Delete exisiting options
   document.querySelectorAll(".option").forEach((element) => element.remove());
 
+  // Render options
   currentQuestion.options.forEach((option) => {
     const optionButton = document.createElement("button");
     optionButton.classList.add(
@@ -210,6 +209,14 @@ function displayQuestion() {
       e.target.classList.add("active");
     });
   });
+
+  // Increase progress
+  document.querySelector("#progress").textContent = `Question ${
+    currentQuestionIndex + 1
+  }/${quizQuestions.length}`;
+  document.querySelector("#progressBar").style.width = `${
+    ((currentQuestionIndex + 1) / quizQuestions.length) * 100
+  }%`;
 }
 
 function displayNextQuestion() {
